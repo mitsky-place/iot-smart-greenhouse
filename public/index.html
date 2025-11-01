@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Greenhouse</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Greenhouse</h1>
+
+    <section id="current">
+      <h2>Latest Readings</h2>
+      <div id="readings">
+        <div>Temperature: <span id="temp">--</span> °C</div>
+        <div>Humidity: <span id="humidity">--</span> %</div>
+        <div>Soil: <span id="soil">--</span></div>
+        <div>Timestamp: <span id="ts">--</span></div>
+      </div>
+    </section>
+
+    <section id="actuators">
+      <h2>Actuators</h2>
+      <div class="actuator">
+        <span>Pump</span>
+        <button id="btn-pump" data-name="pump">Toggle</button>
+        <span id="state-pump">State: --</span>
+      </div>
+      <div class="actuator">
+        <span>Fan</span>
+        <button id="btn-fan" data-name="fan">Toggle</button>
+        <span id="state-fan">State: --</span>
+      </div>
+    </section>
+
+    <section id="history">
+      <h2>History (latest 20)</h2>
+      <table id="history-table">
+        <thead><tr><th>Time</th><th>Temp (°C)</th><th>Humidity (%)</th><th>Soil</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
